@@ -153,29 +153,3 @@ if __name__ == '__main__':
     
     port = int(os.environ.get('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
-```
-
-### **Actualiza `requirements.txt`:**
-```
-Flask==3.0.0
-python-telegram-bot==20.7
-gspread==5.12.0
-oauth2client==4.1.3
-gunicorn==21.2.0
-```
-
----
-
-## 🚀 **Configuración en Render:**
-
-### **Tipo de servicio:**
-- ✅ **Web Service** (NO Background Worker)
-
-### **Build Command:**
-```
-pip install -r requirements.txt
-```
-
-### **Start Command:**
-```
-gunicorn bot:app
